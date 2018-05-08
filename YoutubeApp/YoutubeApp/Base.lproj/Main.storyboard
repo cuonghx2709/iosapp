@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UFs-a7-Hwm">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="w5b-Kv-VLA">
+            <objects>
+                <viewController id="KBQ-0R-wgN" customClass="SearchViewController" customModule="YoutubeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0gS-gD-H55">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RE8-xS-BpW">
+                                <rect key="frame" x="0.0" y="76" width="320" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KBQ-0R-wgN" id="P1u-a7-9cV"/>
+                                    <outlet property="delegate" destination="KBQ-0R-wgN" id="iqb-0e-ipN"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="OCE-0Y-096">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <color key="barTintColor" red="0.9843137264251709" green="0.086274512112140656" blue="0.019607843831181526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KBQ-0R-wgN" id="XkT-Uw-LGe"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KJI-RO-LPy" firstAttribute="bottom" secondItem="RE8-xS-BpW" secondAttribute="bottom" id="cPr-Je-EEb"/>
+                            <constraint firstItem="KJI-RO-LPy" firstAttribute="trailing" secondItem="RE8-xS-BpW" secondAttribute="trailing" id="cre-CK-MgW"/>
+                            <constraint firstItem="OCE-0Y-096" firstAttribute="top" secondItem="KJI-RO-LPy" secondAttribute="top" id="hUr-TF-gQf"/>
+                            <constraint firstItem="RE8-xS-BpW" firstAttribute="top" secondItem="OCE-0Y-096" secondAttribute="bottom" id="qPf-et-V4C"/>
+                            <constraint firstItem="RE8-xS-BpW" firstAttribute="leading" secondItem="KJI-RO-LPy" secondAttribute="leading" id="qgt-do-knQ"/>
+                            <constraint firstItem="OCE-0Y-096" firstAttribute="leading" secondItem="KJI-RO-LPy" secondAttribute="leading" id="ytR-md-VmH"/>
+                            <constraint firstItem="OCE-0Y-096" firstAttribute="centerX" secondItem="0gS-gD-H55" secondAttribute="centerX" id="zWu-ul-I5U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KJI-RO-LPy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Oar-4R-ahG">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="ZEw-Ie-XAZ" id="B4r-Pk-shL"/>
+                        <outlet property="tableView" destination="RE8-xS-BpW" id="gyw-Fz-iSe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tho-DZ-COA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="ZEw-Ie-XAZ">
+                    <connections>
+                        <outlet property="delegate" destination="KBQ-0R-wgN" id="sct-qb-5Na"/>
+                        <outlet property="searchContentsController" destination="KBQ-0R-wgN" id="UI4-Li-une"/>
+                        <outlet property="searchResultsDataSource" destination="KBQ-0R-wgN" id="ORD-8s-eQm"/>
+                        <outlet property="searchResultsDelegate" destination="KBQ-0R-wgN" id="ZQM-Fl-mLu"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-930" y="-329"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="0q5-CN-UeL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qHT-nc-PRo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" landscapeImage="Home" id="yGN-gZ-eDo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dMq-5u-Ho5">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PlB-mQ-kRN" kind="relationship" relationship="rootViewController" id="cqN-4O-oPq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANN-e6-nTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-894" y="-1068"/>
+        </scene>
+        <!--bookmark-->
+        <scene sceneID="H9t-VJ-Z8T">
+            <objects>
+                <viewController title="bookmark" id="PlB-mQ-kRN" customClass="ListViewController" customModule="YoutubeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bg-u4-Ydb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-yb-dFM">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PlB-mQ-kRN" id="bcj-EO-htZ"/>
+                                    <outlet property="delegate" destination="PlB-mQ-kRN" id="11m-Cf-S0R"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ITE-yb-dFM" firstAttribute="top" secondItem="IrS-TJ-Ebq" secondAttribute="top" id="3Da-lr-MSE"/>
+                            <constraint firstItem="IrS-TJ-Ebq" firstAttribute="trailing" secondItem="ITE-yb-dFM" secondAttribute="trailing" id="Uvs-SK-kdc"/>
+                            <constraint firstItem="IrS-TJ-Ebq" firstAttribute="bottom" secondItem="ITE-yb-dFM" secondAttribute="bottom" id="pIL-W1-eCs"/>
+                            <constraint firstItem="ITE-yb-dFM" firstAttribute="leading" secondItem="IrS-TJ-Ebq" secondAttribute="leading" id="q0B-kc-WUk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IrS-TJ-Ebq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="i3m-bj-Uav">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Home" id="q0A-ZI-bvv"/>
+                    <connections>
+                        <outlet property="tableView" destination="ITE-yb-dFM" id="ZdP-bb-yu8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQW-dx-gh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415" y="-1067"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4D6-7H-PXE">
+            <objects>
+                <viewController storyboardIdentifier="youtubeView" id="8z6-MA-mui" customClass="ViewController" customModule="YoutubeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oFp-RY-Lne">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MR4-1c-SAU" customClass="YTPlayerView">
+                                <rect key="frame" x="16" y="72" width="288" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wIu-RC-lt8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wAH-72-lPb"/>
+                    <connections>
+                        <outlet property="youtubeView" destination="MR4-1c-SAU" id="4JP-1e-KqX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGm-Bu-OJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295.625" y="-1069.0140845070423"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="PIe-9A-JIp">
+            <objects>
+                <tabBarController id="UFs-a7-Hwm" customClass="TabBarViewController" customModule="YoutubeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="neD-lX-G70">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.050980392839999999" blue="0.0039215688589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.98431372640000003" green="0.086274512110000007" blue="0.019607843829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qHT-nc-PRo" kind="relationship" relationship="viewControllers" id="ucj-BV-hoU"/>
+                        <segue destination="KBQ-0R-wgN" kind="relationship" relationship="viewControllers" id="Vmk-yr-bMY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAb-m4-3nQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1850" y="-585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Home" width="32" height="32"/>
+    </resources>
+</document>

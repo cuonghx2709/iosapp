@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellYoutube" rowHeight="103" id="VAB-cH-FSU" customClass="YoutubeCell" customModule="YoutubeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="103"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VAB-cH-FSU" id="qkS-f9-GK7">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="102.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HTz-oL-AJc">
+                        <rect key="frame" x="16" y="11" width="124" height="81"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="124" id="26i-tX-hSO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYe-xD-7D9">
+                        <rect key="frame" x="148" y="11" width="222" height="60"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiE-Nq-58z">
+                        <rect key="frame" x="148" y="77" width="222" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="cdF-HT-2To"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HTz-oL-AJc" firstAttribute="bottom" secondItem="UiE-Nq-58z" secondAttribute="bottom" id="E4n-lu-xkY"/>
+                    <constraint firstItem="qYe-xD-7D9" firstAttribute="trailing" secondItem="UiE-Nq-58z" secondAttribute="trailing" id="Ewf-th-kUE"/>
+                    <constraint firstItem="qYe-xD-7D9" firstAttribute="leading" secondItem="HTz-oL-AJc" secondAttribute="trailing" constant="8" symbolic="YES" id="FPk-w8-76a"/>
+                    <constraint firstItem="HTz-oL-AJc" firstAttribute="leading" secondItem="qkS-f9-GK7" secondAttribute="leadingMargin" constant="-4" id="Giy-5e-OUy"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qYe-xD-7D9" secondAttribute="trailing" constant="2" id="JCE-mr-KLB"/>
+                    <constraint firstItem="UiE-Nq-58z" firstAttribute="top" secondItem="qYe-xD-7D9" secondAttribute="bottom" constant="6" id="Z3I-rX-OQO"/>
+                    <constraint firstItem="HTz-oL-AJc" firstAttribute="top" secondItem="qkS-f9-GK7" secondAttribute="topMargin" id="c1m-Fw-Hjm"/>
+                    <constraint firstItem="HTz-oL-AJc" firstAttribute="bottom" secondItem="qkS-f9-GK7" secondAttribute="bottomMargin" id="nmS-8y-dYo"/>
+                    <constraint firstItem="HTz-oL-AJc" firstAttribute="top" secondItem="qYe-xD-7D9" secondAttribute="top" id="vPo-aW-aHX"/>
+                    <constraint firstItem="qYe-xD-7D9" firstAttribute="leading" secondItem="UiE-Nq-58z" secondAttribute="leading" id="yau-7A-wVM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageVideo" destination="HTz-oL-AJc" id="xx5-LC-7ia"/>
+                <outlet property="labelDiscription" destination="UiE-Nq-58z" id="zMO-Co-8lm"/>
+                <outlet property="labelTitle" destination="qYe-xD-7D9" id="Nw8-J7-Ufh"/>
+            </connections>
+            <point key="canvasLocation" x="44" y="-53.5"/>
+        </tableViewCell>
+    </objects>
+</document>

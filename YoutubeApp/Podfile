@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+target 'YoutubeApp' do
+  # your other pod
+  # ...
+  pod 'Kingfisher', '~> 4.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'youtube-ios-player-helper', '~> 0.1'
+  pod 'YouTubePlayer'
+end
